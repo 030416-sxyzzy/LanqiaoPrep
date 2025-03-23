@@ -1,0 +1,42 @@
+二分法简介
+二分法的效率有多高？它把O(n)的查询时间，提高到O(log2n)。
+二分法的思想很简单，每次把搜索范围缩小到原来的一半，经过多次缩小，直到找到答案为止。
+例如在n个数中找某个数，每次缩小一半范围，二分的总次数就是O(log2n)。设初始区间是[L, R]，即这个区间内有n个数。
+在[L, R]中找答案，二分法代码这样写：
+while (L < R){        //一直二分，直到区间[L,R]缩小到L=R    
+int mid = (L + R) / 2;  //mid是L、R的中间值    
+if (check(mid))  //答案在左半部分[L,mid]        
+ R = mid; // 更新R=mid，下一次搜原来的半部分    
+else   //答案在右半部分[mid+1, R]        
+L = mid + 1; // 更新L=mid+1，下一次搜原来的右半部分}答案在区间[L, R]中，通过中间值mid缩小搜索范围。
+这样搜索答案：如果答案在左半部分，把范围缩小到[L, mid]，更新R = mid，然后继续。
+如果答案在右半部分，把范围缩小到[mid+1, R]，更新L = mid+1，然后继续。经过log2n次二分，范围缩小到L = R，这就是答案。
+二分法的应用
+如果是在数列中查找，要求数列是单调有序的，这样check()最简单。蓝桥杯一般考这种场景。
+check()函数的写法：
+boolean check(int x,int mid){            //二分中的检查函数    
+return x <= a[mid];               //如果x小于等于中间数，返回true}
+
+
+模版1：
+int[] arr= {1,2,3,4,5,6};
+int left=0,right=arr.length-1;
+while(left<right) {
+	int mid=(left+right)/2;
+	if(arr[mid]>=k) {
+		right=mid;
+	}else{
+		left=mid+1;
+	}
+}
+模版2：
+int[] arr= {1,2,3,4,5,6};
+int left=0,right=arr.length-1;
+while(left<right) {
+	int mid=(left+right+1)/2;
+	if(arr[mid]>k) {
+		right=mid-1;
+	}else{
+		left=mid;
+	}
+}

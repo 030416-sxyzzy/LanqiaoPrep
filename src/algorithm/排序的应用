@@ -1,0 +1,40 @@
+排序的应用
+Java的排序函数Java的排序函数是Arrays.sort()、Collections.sort()。
+Arrays.sort()可以对数组，字符串等排序。
+Collections.sort()是对list集合排序，list也可以放数字、字符串。
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        int[] a = {8, 3, 6, 2, 3, 5, 9};
+        Arrays.sort(a); // 升序
+        for (int num : a) {
+            System.out.print(num + " "); // 输出：2 3 3 5 6 8 9
+        }
+        System.out.println();
+        
+        Integer[] b = {2, 3, 4, 1, 0, 6, 5};
+        Arrays.sort(b, Collections.reverseOrder()); // 降序
+        // 不支持基本类型int，double，char，如果是int型需要改成Integer，float要改成Float
+        for (int num : b) {
+            System.out.print(num + " "); // 输出：6 5 4 3 2 1 0
+        }
+        System.out.println();
+        
+        String s = "hello world";
+        char[] chars = s.toCharArray();
+        Arrays.sort(chars);
+        s = new String(chars);
+        // Java中字符串是不可变的，因此不能直接在原字符串上进行排序。
+        // 可以将字符串转换为字符数组进行排序，然后再将排序后的字符数组转换回字符串。
+        System.out.println(s); // 输出：dehllloorw
+        
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(36);
+        list.add(52);
+        list.add(15);
+        Collections.sort(list);
+        System.out.print(list); // 输出： [15, 36, 52]
+    }
+}
