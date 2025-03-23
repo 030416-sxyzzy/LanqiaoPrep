@@ -1,0 +1,18 @@
+日期
+Java有日期包java.time。time包主要包含以下类： 
+LocalDate，表示日期，年、月、日。
+eg.for (int year = 1949; year <= 2012; year++) {
+            // 使用 LocalDate 类创建一个表示该年10月1日的日期对象
+            LocalDate date = LocalDate.of(year, 10, 1);
+            if (date.getDayOfWeek() == DayOfWeek.SUNDAY) 
+                cnt++;  // 如果是星期天，计数器 cnt 加1
+        }
+        System.out.println(cnt);  
+    }
+LocalTime，表示时间，时、分、秒、纳秒。
+LocalDateTime，表示日期和时间，年、月、日、时、分、秒、纳秒。
+Duration，表示时间段，用于计算两个时间之间的差异。
+Period，表示日期段，用于计算两个日期之间的差异。
+DateTimeFormatter，用于将日期和时间格式化为字符串，或将字符串解析为日期和时间对象。
+date.getDayOfWeek() 返回一个 DayOfWeek 枚举类型的值，表示日期的星期几。DayOfWeek.SUNDAY 是 DayOfWeek 枚举中的一个值，表示星期天。
+

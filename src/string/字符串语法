@@ -1,0 +1,45 @@
+字符串String和StringBuilder
+public class Main{
+	public static void main(String [] args) {
+		Scanner scanner=new Scanner(System.in);
+//String
+//		String string=new String("javaweb");
+//		int k=string.indexOf("abc");
+//		System.out.println(k);//k=-1
+//StringBuilder
+		StringBuilder stringBuilder=new StringBuilder();
+		stringBuilder.append(1);
+		stringBuilder.append('x');
+		stringBuilder.append("javaweb");
+		stringBuilder.reverse();//反转
+		stringBuilder.insert(0, "2");//索引0的位置插入2
+		System.out.println(stringBuilder);
+		
+	}
+}
+
+Java的String类参考《蓝桥杯算法入门Java》“3.1.1 String”。方法说明
+length()返回字符串的长度
+***
+contains()检查字符串是否包含指定的字符序列，并返回布尔值。
+isEmpty()检查字符串是否为空（长度为0），并返回布尔值。
+compareTo()按字典顺序比较两个字符串，返回一个整数值。
+valueOf()将其他类型的数据转换为字符串。例如，valueOf(int i)可以将整数转换为字符串toCharArray()将字符串转换为字符数组，并返回该数组。
+***
+charAt()返回指定索引位置的字符
+trim()去除字符串首尾的空格，并返回新的字符串
+concat()将指定的字符串连接到原字符串的末尾，或者用’+’运算符
+***
+equals()字符串比较
+***
+substring()返回从指定索引开始到指定索引结束的子字符串 substring(0, 2): 对 parts[0] 进行字符串的截取。substring(0, 2) 会从字符串的索引位置 0 开始，截取到索引位置 2（不包括位置 2）
+indexOf()返回指定字符串在原字符串中第一次出现的索引位置
+replace()将字符串中的指定字符替换为新的字符
+toUpperCase()将字符串转换为大写
+toLowerCase()将字符串转换为小写
+***
+split()将字符串按照指定的正则表达式分割成字符串数组
+String []str=scan.nextLine().split(" ");
+String c;
+char[] ch=c.toCharArray();//将字符串转换为字符数组
+String s=new String(ch);//将字符数组转换为字符串

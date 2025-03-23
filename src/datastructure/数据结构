@@ -1,0 +1,54 @@
+栈：先进后出
+常用方法：
+Stack 类常用的库函数：
+导入java.util.Stack类
+（1）Stack<Integer> stack = new Stack<>();
+（2）stack.push(1); // 将元素 1 推入栈顶
+（3）pop(): //移除并返回栈顶的元素。
+（4）peek(): //返回栈顶的元素，但不移除它。
+（5）isEmpty():  //判断栈是否为空。
+eg.boolean isEmpty = stack.isEmpty(); // 判断栈是否为空
+（6）search(Object o)://返回对象 o 在栈中的位置（从栈顶开始，位置从 1 开始）。如果栈中不包含该元素，返回 -1。
+返回值: 返回元素的位置，或 -1 如果元素不在栈中。
+--------------------------------------------------------------------------------------
+队列
+语法：
+import java.util.Queue;
+import java.util.LinkedList;
+
+public class QueueExample {
+    public static void main(String[] args) {
+        // 创建一个LinkedList队列
+        Queue<Integer> queue = new LinkedList<>();
+        
+        // 向队列中添加元素
+        queue.offer(10);
+        queue.offer(20);
+        queue.offer(30);
+        
+        // 输出队列的头部元素
+        System.out.println("Head of the queue: " + queue.peek());
+        
+        // 移除并获取队列的头部元素
+        System.out.println("Removed from the queue: " + queue.poll());
+        
+        // 输出队列大小
+        System.out.println("Size of the queue: " + queue.size());
+        
+        // 遍历队列中的元素
+        System.out.println("Queue contents:");
+        for (Integer element : queue) {
+            System.out.println(element);
+        }
+        
+        // 移除剩余的元素并打印队列
+        while (!queue.isEmpty()) {
+            System.out.println("Removed from the queue: " + queue.poll());
+        }
+    }
+}
+
+if (!q.contains(x))
+contains(x) 方法会检查队列中是否已经有 x 这个元素，如果队列中没有 x，那么 contains(x) 返回 false
+
+------------------------------------------------------------------------------------
