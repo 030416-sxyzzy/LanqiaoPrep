@@ -1,0 +1,14 @@
+数字串个数
+python写法：
+mod=10**9+7
+a=pow(9,10000)
+b=pow(8,10000)
+c=pow(7,10000)
+ans=(a-b*2+c)%mod
+print(ans)
+java写法：
+long long a=pow(9,10000)%mod
+long long b=pow(8,10000)%mod
+long long c=pow(7,10000)%mod
+ans=(a-b*2+c+mod)%mod//减法可能出现负数
+System.out.println(ans)
