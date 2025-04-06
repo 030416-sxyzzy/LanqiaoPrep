@@ -1,5 +1,6 @@
 package zhati;
 import java.util.*;
+//test
 public class HaoShu {
 	public static void main(String [] args) {
 		Scanner scanner=new Scanner(System.in);
