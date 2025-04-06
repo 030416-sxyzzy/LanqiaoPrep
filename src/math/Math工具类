@@ -1,0 +1,11 @@
+大数类
+import java.math.BigInteger;
+BigInteger a=new BigInteger("123");
+BigInteger b=new BigInteger("456");
+System.out.println(a.add(b));//加法，subtract减法，multiply乘法，divide除法,max最大值，min最小值
+//输出579
+绝对值abs(int n)
+向上取整ceil(double n)3.2->4
+向下取整floor（double n)3.2->3
+四舍五入round(float n)
+获取两个int值中的最大值max(int a,int b)

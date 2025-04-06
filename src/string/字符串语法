@@ -17,6 +17,38 @@ public class Main{
 		
 	}
 }
+基本字符串方法：
+String str="Hello World";
+
+//获取字符
+char c=str.charAt(1);//e
+
+//查找索引
+int idx=str.indexOf("World");//6
+
+//子字符串
+String sub=str.substring(6);//"World"
+
+//分割字符串
+String [] s=str.split(" ");
+String [] s=str.split("\\.")//特殊分割
+
+//字符串比较
+boolean eq=str.equals("Hello");//false
+boolean eqlgnore=str.equalslgnoreCase("Hello World");//true不区分大小写
+
+//字符串与其他类型的转换
+//字符串转数字
+String num="123";
+int nums=Integer.parseInt(num);
+
+//数字转字符串
+String str=String.valueOf(123);
+
+//字符数组转字符串
+char[] ch={'a','b','c'};
+String str=new String(ch);
+
 
 Java的String类参考《蓝桥杯算法入门Java》“3.1.1 String”。方法说明
 length()返回字符串的长度
